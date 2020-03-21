@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public bool tankControls;
 
+    public static PlayerController instance;
+
     public Rigidbody2D rigidBody;
     public Animator animator;
     public float rotationSpeed = 1f;
@@ -18,6 +20,15 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Making sure ONLY one player is alive
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }

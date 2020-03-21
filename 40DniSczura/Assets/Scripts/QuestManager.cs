@@ -50,7 +50,7 @@ public class QuestManager : MonoBehaviour
         {
             if(questList[questID].questTriggers[i] == triggerName)
             {
-                Debug.Log(i);
+                //Debug.Log(i);
                 return i;
             }
         }
