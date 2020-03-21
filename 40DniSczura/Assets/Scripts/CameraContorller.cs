@@ -5,13 +5,15 @@ using UnityEngine;
 public class CameraContorller : MonoBehaviour
 {
     public Transform anchor;
-    public int cameraSize;
+    public float cameraSize;
 
     public static CameraContorller instance;
     public static Camera mainCamera;
 
     //The speed with which the camera follows its anchor
     public float lerpSpeed;
+
+    public bool testing;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +38,21 @@ public class CameraContorller : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, new Vector3(anchor.position.x, anchor.position.y, transform.position.z), lerpSpeed);
         }
         mainCamera.orthographicSize = cameraSize;
+
+        if(testing)
+        {
+            if (Input.GetKey("i"))
+            {
+                cameraSize += 0.2f;
+            }
+            if (Input.GetKey("u"))
+            {
+                cameraSize -= 0.2f;
+            }
+            if (Input.GetKeyDown("o"))
+            {
+                cameraSize = 5f;
+            }
+        }  
     }
 }
