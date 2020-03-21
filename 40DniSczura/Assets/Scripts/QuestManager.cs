@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
+    //The only QuestManager allowed to exist
     public static QuestManager instance;
+
+    //List of all quests with their states
     public Quest[] questList;
+
+    //Something for testing only
+    public bool testing;
     public Text testText;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Making sure ONLY one QM is alive
         if(instance != null)
         {
             Destroy(gameObject);
@@ -25,13 +32,18 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(questList[0] != null)
+        //Quest testing stuff - do triggers work?
+        if(testing)
         {
+            if (questList[0] != null)
+            {
 
-            testText.text = questList[0].questTriggers[0] + ": " + questList[0].questTriggerStates[0];
-        }
+                testText.text = questList[0].questTriggers[0] + ": " + questList[0].questTriggerStates[0];
+            }
+        }     
     }
 
+    //Returns the ID of the given trigger of a given quest
     private int FindTriggerID(int questID, string triggerName)
     {
         for(int i = 0; i < questList[questID].questTriggers.Length; i++)
@@ -45,6 +57,7 @@ public class QuestManager : MonoBehaviour
         return -1;
     }
 
+    //Returns the state of the given trigger of a given quest
     public bool GetTriggerState(int questID, string triggerName)
     {
         int triggerID = FindTriggerID(questID, triggerName);
@@ -59,6 +72,7 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    //Sets the given trigger to a given state
     public void TriggerQuest(int questID, string triggerName, bool triggerState)
     {
         int triggerID = FindTriggerID(questID, triggerName);
@@ -69,6 +83,7 @@ public class QuestManager : MonoBehaviour
         }      
     }
 
+    //Sets the given trigger to 'true'
     public void TriggerQuest(int questID, string triggerName)
     {
         int triggerID = FindTriggerID(questID, triggerName);
@@ -79,11 +94,21 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    //Marks a quest as started
     public void StartQuest(int questID)
     {
         if(!questList[questID].questStarted)
         {
             questList[questID].questStarted = true;
+        }
+    }
+
+    //Marks a quest as finished
+    public void EndQuest(int questID)
+    {
+        if(!questList[questID].questFinished && questList[questID].questStarted)
+        {
+            questList[questID].questFinished = true;
         }
     }
 }
