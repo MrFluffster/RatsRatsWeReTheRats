@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed, backSpeed;
 
     public float ratAngle;
+
+    public int[] inventory;
     //public GameObject tail;
     //private float lastRotation;
 
@@ -79,6 +82,58 @@ public class PlayerController : MonoBehaviour
                 //rigidBody.SetRotation(ratAngle);
             }
         }       
+    }
+
+    private void SortInventory()
+    {
+        Array.Sort(inventory);
+        Array.Reverse(inventory);
+    }
+
+    public bool HasItems()
+    {
+        SortInventory();
+        int counter = 0;
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == 0)
+            {
+                counter++;
+            }
+        }
+
+        if (counter < inventory.Length)
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    public void AddItem(int itemID)
+    {
+        SortInventory();
+        for(int i = 0; i < inventory.Length; i++)
+        {
+            if(inventory[i] == 0)
+            {
+                inventory[i] = itemID;
+                break;
+            }
+        }
+        SortInventory();
+    }
+
+    public void RemoveItems(int itemID)
+    {
+        SortInventory();
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == itemID)
+            {
+                inventory[i] = 0;               
+            }
+        }
+        SortInventory();
     }
 
     public static Vector2 RadianToVector2(float radian)

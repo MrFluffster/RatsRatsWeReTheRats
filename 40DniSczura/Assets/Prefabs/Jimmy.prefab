@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 167046733867318351}
   m_Layer: 0
   m_Name: Jimmy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   moveSpeed: 6
   backSpeed: 3
   ratAngle: 0
+  inventory: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!50 &167046733867318350
 Rigidbody2D:
   serializedVersion: 4

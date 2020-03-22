@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour
     public bool beginQuest, triggerQuest;
     public int questID;
     public string questTrigger;
+    public bool cameraLocked;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +29,27 @@ public class NPC : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
-            if (dialogBox.activeInHierarchy && (currentLine == dialog.Length))
+            if (dialogBox.activeInHierarchy && (currentLine >= dialog.Length))
             {
                 ExitDialogue();
             }
             else
-            {
-                CameraContorller.instance.lerpSpeed = 0.1f;
-                CameraContorller.instance.anchor = transform;
-                CameraContorller.instance.cameraSize = 4f;
+            {            
                 dialogBox.SetActive(true);
-                CheckIfName();
-                dialogText.text = dialog[currentLine];
-                currentLine++;
+                //CheckIfName();
+                CheckIfCommand();
+                if (cameraLocked)
+                {
+                    CameraContorller.instance.lerpSpeed = 0.05f;
+                    CameraContorller.instance.anchor = transform;
+                    CameraContorller.instance.cameraSize = 4f;
+                    Debug.Log(CameraContorller.instance.anchor.name);
+                }
+                if (currentLine < dialog.Length)
+                {
+                    dialogText.text = dialog[currentLine];
+                    currentLine++;
+                }             
             }
         }
     }
@@ -82,11 +91,38 @@ public class NPC : MonoBehaviour
 
     private void CheckIfName()
     {
-        if(dialog[currentLine].StartsWith("--"))
+        while(dialog[currentLine].StartsWith("--"))
         {
             nameText.text = dialog[currentLine].Replace("--", "") + ":";
             portrait.sprite = GameManager.instance.GetPortrait(dialog[currentLine].Replace("--", ""));
             Debug.Log(dialog[currentLine].Replace("--", ""));
+            currentLine++;
+        }
+    }
+
+    private void CheckIfCommand()
+    {
+        while(currentLine < dialog.Length && dialog[currentLine].StartsWith("--"))
+        {
+            if(dialog[currentLine] == "--camera")
+            {
+                cameraLocked = !cameraLocked;
+                Debug.Log("Psuje!");
+            }
+            else if (dialog[currentLine].StartsWith("--quest_"))
+            {
+                int.TryParse(dialog[currentLine].Replace("--quest_", ""), out questID);
+            }
+            else if (dialog[currentLine].StartsWith("--trigger_"))
+            {
+                QuestManager.instance.SwitchTrigger(questID, dialog[currentLine].Replace("--trigger_", ""));
+            }
+            else
+            {
+                nameText.text = dialog[currentLine].Replace("--", "") + ":";
+                portrait.sprite = GameManager.instance.GetPortrait(dialog[currentLine].Replace("--", ""));
+            }
+            Debug.Log(dialog[currentLine]);
             currentLine++;
         }
     }
