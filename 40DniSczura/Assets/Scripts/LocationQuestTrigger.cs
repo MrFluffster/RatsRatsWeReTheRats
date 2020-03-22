@@ -25,7 +25,7 @@ public class LocationQuestTrigger : MonoBehaviour
         {
             if(QuestManager.instance.questList[questID].questStarted && !QuestManager.instance.questList[questID].questFinished)
             {
-                QuestManager.instance.TriggerQuest(questID, triggerName);
+                QuestManager.instance.SwitchTrigger(questID, triggerName);
             }
         }
     }

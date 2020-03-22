@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questList:
   - {fileID: 0}
+  - {fileID: 0}
   testing: 1
   testText: {fileID: 0}
 --- !u!114 &8884689086665855841
@@ -63,6 +64,13 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: 21300000, guid: 273686f2657b87b489b42e1b9466790c, type: 3}
   - {fileID: 21300000, guid: 1ee08bfaf0236f449a71d669a7a4313d, type: 3}
+  - {fileID: 21300000, guid: 273686f2657b87b489b42e1b9466790c, type: 3}
+  - {fileID: 21300000, guid: 1ee08bfaf0236f449a71d669a7a4313d, type: 3}
+  - {fileID: 21300000, guid: 296f9256b0fa67f46a25ef3b2ef67f6f, type: 3}
   characterNames:
   - "Mi\u0142y Jimmy"
   - "M\u0142ody Testiusz"
+  - "S\u0119dziwy Eustachy"
+  - "Przera\u017Cona Rodzinka"
+  - Zbrodniarz Gorgiasz
+  itemIcons: []

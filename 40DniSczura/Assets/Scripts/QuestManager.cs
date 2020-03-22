@@ -94,6 +94,17 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    //Switches the state of a given trigger
+    public void SwitchTrigger(int questID, string triggerName)
+    {
+        int triggerID = FindTriggerID(questID, triggerName);
+
+        if (triggerID != -1 && questList[questID].questStarted)
+        {
+            questList[questID].questTriggerStates[triggerID] = !questList[questID].questTriggerStates[triggerID];
+        }
+    }
+
     //Marks a quest as started
     public void StartQuest(int questID)
     {
