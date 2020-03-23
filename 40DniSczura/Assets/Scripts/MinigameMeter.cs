@@ -145,45 +145,9 @@ public class MinigameMeter : MonoBehaviour
                     pointMeter -= 1;
                     if (pointMeter < 0) pointMeter = 0;
 
-                    if (numberInSequence < sequence.Length - 1)
-                    {
-                        numberInSequence++;
-                    }
-                    else
-                    {
-                        numberInSequence = 0;
-                    }
-                }
-            }
-            /*
-            if (playerInput == sequence[numberInSequence] && displayTimer < 0)
-            {         
-                
-                pointMeter++;
-                if (numberInSequence < sequence.Length - 1)
-                {
-                    numberInSequence++;
-                }
-                else
-                {
                     numberInSequence = 0;
                 }
             }
-            else if (playerInput != -1 && displayTimer < 0)
-            {
-                //TODO Give extra feedback
-                pointMeter--;
-                if (pointMeter < 0) pointMeter = 0;
-
-                if (numberInSequence < sequence.Length - 1)
-                {
-                    numberInSequence++;
-                }
-                else
-                {
-                    numberInSequence = 0;
-                }
-            }*/
             if (pointLossTimer < 0)
             {
                 pointMeter -= 1;

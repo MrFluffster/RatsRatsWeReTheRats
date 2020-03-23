@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MinigameMeter.cs" />
     <Compile Include="Assets\Scripts\MinigameQuick.cs" />
+    <Compile Include="Assets\Scripts\MinigameReverse.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Options.cs" />
     <Compile Include="Assets\Scripts\PatrolPoint.cs" />
