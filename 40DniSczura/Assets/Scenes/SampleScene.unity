@@ -219,7 +219,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1320829e9b23ce7498526f3cc1336fe8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 290f1b4c67742294d8a5b405e8e7d247, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -802,7 +802,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9a3279247560c6b4b85ae5eb74d3fa86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fef6065d662241b46b1f9481444e714b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -60293,7 +60293,7 @@ MonoBehaviour:
   - koniec
   - gorgiasz_kamera
   - rodzinka_ucieka
-  questTriggerStates: 010000000000
+  questTriggerStates: 000000000000
 --- !u!4 &798580079
 Transform:
   m_ObjectHideFlags: 0
@@ -60390,7 +60390,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a3279247560c6b4b85ae5eb74d3fa86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fef6065d662241b46b1f9481444e714b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -62324,7 +62324,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9a3279247560c6b4b85ae5eb74d3fa86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fef6065d662241b46b1f9481444e714b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -62457,7 +62457,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c503da1910899a041a6b859dd08acfe9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7c8687502d21294f9a2fa61a2cc1fd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -63202,7 +63202,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9a3279247560c6b4b85ae5eb74d3fa86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fef6065d662241b46b1f9481444e714b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -64172,7 +64172,7 @@ PrefabInstance:
     - target: {fileID: 8884689086665855841, guid: 746b7e0ccb725a442958bcd557594a38,
         type: 3}
       propertyPath: itemIcons.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8884689086665855841, guid: 746b7e0ccb725a442958bcd557594a38,
         type: 3}
@@ -64230,6 +64230,18 @@ PrefabInstance:
       propertyPath: inventorySlots.Array.data[7]
       value: 
       objectReference: {fileID: 749348258}
+    - target: {fileID: 8884689086665855841, guid: 746b7e0ccb725a442958bcd557594a38,
+        type: 3}
+      propertyPath: itemIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 019fe7c8ba4718449bf6e53a929550ec,
+        type: 3}
+    - target: {fileID: 8884689086665855841, guid: 746b7e0ccb725a442958bcd557594a38,
+        type: 3}
+      propertyPath: characterPortraits.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8010905bc3983e94f9e95e3bc143f769,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746b7e0ccb725a442958bcd557594a38, type: 3}
 --- !u!4 &2692845448577139881 stripped
