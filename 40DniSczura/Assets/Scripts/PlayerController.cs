@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float ratAngle;
 
     public int[] inventory;
+    public bool playerLocked;
     //public GameObject tail;
     //private float lastRotation;
 
@@ -41,8 +42,16 @@ public class PlayerController : MonoBehaviour
     {
         float moveX, moveY;
 
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        if(!playerLocked)
+        {
+            moveX = Input.GetAxisRaw("Horizontal");
+            moveY = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            moveX = 0f;
+            moveY = 0f;
+        }
 
         if (tankControls)
         {            
