@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\ItemQuestTrigger.cs" />
     <Compile Include="Assets\Scripts\LocationQuestTrigger.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MinigameMeter.cs" />
     <Compile Include="Assets\Scripts\MinigameQuick.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Options.cs" />
