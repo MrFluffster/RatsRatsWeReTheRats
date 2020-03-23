@@ -30,6 +30,7 @@ public class PatrolPoint : MonoBehaviour
             {
                 patrolling.currentGoal++;
             }
+            patrolling.transform.position = transform.position;
             Debug.Log(patrolling.currentGoal);
         }
     }

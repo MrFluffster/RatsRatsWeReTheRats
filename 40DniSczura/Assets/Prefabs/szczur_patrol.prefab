@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7457441086349292644}
   - component: {fileID: 7457441086349292645}
   - component: {fileID: 7457441086349292666}
-  - component: {fileID: 7457441086349292667}
   - component: {fileID: 7457441086349292664}
+  - component: {fileID: 7848190949887789975}
   m_Layer: 0
   m_Name: szczur_patrol
   m_TagString: Untagged
@@ -106,33 +106,7 @@ MonoBehaviour:
   canChase: 0
   playerInRange: 0
   moveSpeed: 6
-  atPatrolPoint: 0
---- !u!61 &7457441086349292667
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457441086349292665}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0474205, y: -0.08431816}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.336113, y: 1.5362473}
-  m_EdgeRadius: 0
+  atPatrolPoint: 1
 --- !u!50 &7457441086349292664
 Rigidbody2D:
   serializedVersion: 4
@@ -154,3 +128,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &7848190949887789975
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457441086349292665}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3583851, y: 0.64089584}
+      - {x: 0.20919895, y: 0.21585083}
+      - {x: 0.25869465, y: -0.19252777}
+      - {x: 0.7766056, y: -0.81653214}
+      - {x: 0.68679667, y: -0.84080505}
+      - {x: 0.37819147, y: -0.48220825}
+      - {x: 0.14251804, y: -0.32654953}
+      - {x: -0.25519276, y: -0.2137146}
+      - {x: -0.5803232, y: 0.26985168}
+      - {x: -0.6315155, y: 0.5591316}
