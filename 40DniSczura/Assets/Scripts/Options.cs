@@ -26,6 +26,12 @@ public class Options : MonoBehaviour
         GameObject options = GameObject.Find("Options");
         GameObject options_hint = GameObject.Find("Options - hint");
         GameObject options_hint_2 = GameObject.Find("Options - hint 2");
+
+        if (!options_hint.activeSelf)
+        {
+            options_hint.SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
@@ -36,6 +42,7 @@ public class Options : MonoBehaviour
             options.SetActive(false);
             options_hint.SetActive(true);
             options_hint_2.SetActive(false);
+            Time.timeScale = 1f;
         }
 
         else if (Input.GetMouseButtonDown(1) && !options.activeSelf && !optionsLocked)
@@ -43,6 +50,7 @@ public class Options : MonoBehaviour
             options.SetActive(true);
             options_hint.SetActive(false);
             options_hint_2.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         if(Input.GetMouseButtonDown(1) && optionsLocked)
