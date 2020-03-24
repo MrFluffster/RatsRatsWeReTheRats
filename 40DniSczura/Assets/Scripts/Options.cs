@@ -36,7 +36,6 @@ public class Options : MonoBehaviour
             options.SetActive(false);
             options_hint.SetActive(true);
             options_hint_2.SetActive(false);
-            Time.timeScale = 1f;
         }
 
         else if (Input.GetMouseButtonDown(1) && !options.activeSelf && !optionsLocked)
@@ -44,7 +43,6 @@ public class Options : MonoBehaviour
             options.SetActive(true);
             options_hint.SetActive(false);
             options_hint_2.SetActive(true);
-            Time.timeScale = 0f;
         }
 
         if(Input.GetMouseButtonDown(1) && optionsLocked)
