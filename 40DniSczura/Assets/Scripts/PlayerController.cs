@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     public int[] inventory;
     public bool playerLocked;
+
+    public bool transitioning;
+    public string transitionID;
     //public GameObject tail;
     //private float lastRotation;
 
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
         {
             instance = this;
         }
+        DontDestroyOnLoad(gameObject);
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
