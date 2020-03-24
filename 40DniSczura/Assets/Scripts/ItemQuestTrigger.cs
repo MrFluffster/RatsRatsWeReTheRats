@@ -9,7 +9,8 @@ public class ItemQuestTrigger : MonoBehaviour
     public int itemID;
     public int requiredAmount;
     private int counter;
-    public bool removeItems;
+    private bool removeItems = true;
+    private bool playerInRange;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class ItemQuestTrigger : MonoBehaviour
                 counter++;
             }
         }
-        if(counter >= requiredAmount)
+        if(counter >= requiredAmount && playerInRange)
         {
             if (QuestManager.instance.questList[questID].questStarted && !QuestManager.instance.questList[questID].questFinished)
             {
@@ -38,6 +39,20 @@ public class ItemQuestTrigger : MonoBehaviour
             {
                 PlayerController.instance.RemoveItems(itemID);
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRange = false;
         }
     }
 }
