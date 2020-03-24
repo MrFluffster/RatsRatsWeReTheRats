@@ -15,6 +15,10 @@ public class PlayerKillerTimer : MonoBehaviour
     public float deathTimerBase;
     public float deathTimer;
 
+    //public string activateTrigger;
+    public string deactivateTrigger;
+    public int quest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,10 @@ public class PlayerKillerTimer : MonoBehaviour
             timerDisplay.value = x;
         }
 
+        if(QuestManager.instance.GetTriggerState(quest, deactivateTrigger))
+        {
+            gameObject.SetActive(false);
+        }
 
         if (deathTimer < 0 && playerKilled)
         {
@@ -51,6 +59,8 @@ public class PlayerKillerTimer : MonoBehaviour
             {
                 QuestManager.instance.questList[ResetState.instance.questID].questTriggerStates[i] = ResetState.instance.triggerState[i];
             }
+            PlayerController.instance.RemoveItems(1);
+            PlayerController.instance.RemoveItems(2);
             playerKilled = false;
             PlayerController.instance.gameObject.SetActive(true);
             PlayerController.instance.transitioning = true;
