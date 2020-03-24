@@ -18,6 +18,8 @@ public class NPC : MonoBehaviour
     public string questTrigger;
     public bool cameraLocked;
 
+    public bool instantlyActivated;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
+        if ((Input.GetButtonDown("Fire1") || (instantlyActivated && currentLine == 0)) && playerInRange)
         {
             if (dialogBox.activeInHierarchy && (currentLine >= dialog.Length))
             {
@@ -44,6 +46,7 @@ public class NPC : MonoBehaviour
                     CameraContorller.instance.anchor = transform;
                     CameraContorller.instance.cameraSize = 4f;
                     Debug.Log(CameraContorller.instance.anchor.name);
+                    PlayerController.instance.playerLocked = true;
                 }
                 if (currentLine < dialog.Length)
                 {
@@ -75,9 +78,12 @@ public class NPC : MonoBehaviour
         CameraContorller.instance.anchor = PlayerController.instance.transform;
         CameraContorller.instance.cameraSize = 5f;
         CameraContorller.instance.lerpSpeed = 0.2f;
+        PlayerController.instance.playerLocked = false;
         currentLine = 0;
 
-        if(beginQuest)
+        playerInRange = false;
+
+        if (beginQuest)
         {
             QuestManager.instance.questList[questID].questStarted = true;
         }
