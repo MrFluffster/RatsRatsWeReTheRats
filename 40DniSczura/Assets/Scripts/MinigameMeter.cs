@@ -194,6 +194,7 @@ public class MinigameMeter : MonoBehaviour
             }
             if (rewardWithQuestTrigger && QuestManager.instance.questList[questID].questStarted)
             {
+                Debug.Log("AAAAA");
                 QuestManager.instance.TriggerQuest(questID, trigger, triggerState);
             }
         }

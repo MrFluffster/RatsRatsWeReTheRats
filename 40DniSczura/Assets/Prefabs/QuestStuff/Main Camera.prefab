@@ -53,7 +53,12 @@ MonoBehaviour:
   - antygona_koniec
   - duzy_sloik
   - antygona_kamera
-  questTriggerStates: 010000000000
+  - mg1
+  - mg2
+  - mg3
+  - mg4
+  - mg5
+  questTriggerStates: 0100000000000000000000
 --- !u!1 &490032032612863689
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +156,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  dialogText: {fileID: 0}
+  nameText: {fileID: 0}
+  portrait: {fileID: 0}
+  dialogBox: {fileID: 0}
+  deathTimer: {fileID: 0}
 --- !u!1 &1148953298729049297
 GameObject:
   m_ObjectHideFlags: 0
