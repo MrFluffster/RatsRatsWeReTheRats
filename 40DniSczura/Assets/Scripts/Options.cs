@@ -11,6 +11,8 @@ public class Options : MonoBehaviour
     public bool optionsLocked;
     public static Options instance;
 
+    public bool paused = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,20 @@ public class Options : MonoBehaviour
         GameObject options_hint_2 = GameObject.Find("Options - hint 2");
     }
 
+    bool togglePause()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            return (false);
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            return (true);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +52,7 @@ public class Options : MonoBehaviour
             options.SetActive(false);
             options_hint.SetActive(true);
             options_hint_2.SetActive(false);
+            Time.timeScale = 1;
         }
 
         else if (Input.GetMouseButtonDown(1) && !options.activeSelf && !optionsLocked)
@@ -43,11 +60,13 @@ public class Options : MonoBehaviour
             options.SetActive(true);
             options_hint.SetActive(false);
             options_hint_2.SetActive(true);
+            paused = togglePause();
         }
 
         if(Input.GetMouseButtonDown(1) && optionsLocked)
         {
             optionsLocked = false;
+            Time.timeScale = 1;
         }
 
     }
