@@ -9,8 +9,9 @@ public class ItemQuestTrigger : MonoBehaviour
     public int itemID;
     public int requiredAmount;
     private int counter;
-    private bool removeItems = true;
+    public bool removeItems;
     private bool playerInRange;
+    public bool state;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class ItemQuestTrigger : MonoBehaviour
         {
             if (QuestManager.instance.questList[questID].questStarted && !QuestManager.instance.questList[questID].questFinished)
             {
-                QuestManager.instance.SwitchTrigger(questID, triggerName);
+                QuestManager.instance.TriggerQuest(questID, triggerName, state);
             }
             if(removeItems)
             {
