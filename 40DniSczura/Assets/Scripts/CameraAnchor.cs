@@ -14,6 +14,9 @@ public class CameraAnchor : MonoBehaviour
     public float cameraSize;
     public float lerpSpeed;
 
+    public bool instantReturn;
+    public bool cameraReturned;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,15 @@ public class CameraAnchor : MonoBehaviour
                 CameraContorller.instance.anchor = transform;
                 CameraContorller.instance.cameraSize = cameraSize;
                 CameraContorller.instance.lerpSpeed = lerpSpeed;
+                cameraReturned = false;
+            }
+            else if(instantReturn && !cameraReturned)
+            {
+                CameraContorller.instance.anchor = PlayerController.instance.transform;
+                CameraContorller.instance.transform.position = new Vector3(PlayerController.instance.transform.position.x, PlayerController.instance.transform.position.y, CameraContorller.instance.transform.position.z);
+                CameraContorller.instance.cameraSize = 5;
+                CameraContorller.instance.lerpSpeed = 0.2f;
+                cameraReturned = true;
             }
         }
         else if (collisionActivated && !triggerActivated)
@@ -39,6 +51,15 @@ public class CameraAnchor : MonoBehaviour
                 CameraContorller.instance.anchor = transform;
                 CameraContorller.instance.cameraSize = cameraSize;
                 CameraContorller.instance.lerpSpeed = lerpSpeed;
+                cameraReturned = false;
+            }
+            else if (instantReturn && !cameraReturned)
+            {
+                CameraContorller.instance.anchor = PlayerController.instance.transform;
+                CameraContorller.instance.transform.position = new Vector3(PlayerController.instance.transform.position.x, PlayerController.instance.transform.position.y, CameraContorller.instance.transform.position.z);
+                CameraContorller.instance.cameraSize = 5;
+                CameraContorller.instance.lerpSpeed = 0.2f;
+                cameraReturned = true;
             }
         }
         else
@@ -48,6 +69,15 @@ public class CameraAnchor : MonoBehaviour
                 CameraContorller.instance.anchor = transform;
                 CameraContorller.instance.cameraSize = cameraSize;
                 CameraContorller.instance.lerpSpeed = lerpSpeed;
+                cameraReturned = false;
+            }
+            else if (instantReturn && !cameraReturned)
+            {
+                CameraContorller.instance.anchor = PlayerController.instance.transform;
+                CameraContorller.instance.transform.position = new Vector3(PlayerController.instance.transform.position.x, PlayerController.instance.transform.position.y, CameraContorller.instance.transform.position.z);
+                CameraContorller.instance.cameraSize = 5;
+                CameraContorller.instance.lerpSpeed = 0.2f;
+                cameraReturned = true;
             }
         }
     }
