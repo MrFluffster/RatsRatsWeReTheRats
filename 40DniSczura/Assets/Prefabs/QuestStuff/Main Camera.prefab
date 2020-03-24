@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1014861056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1014861057}
+  - component: {fileID: 1014861058}
+  m_Layer: 0
+  m_Name: QuestHolder3
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1014861057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014861056}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.89308167, y: 1.0263157, z: -0.9345703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2130495378586579557}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014861058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014861056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf9b85987bb6eb4a8d6f22f9367768a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questID: 1
+  questStarted: 1
+  questFinished: 0
+  questTriggers:
+  - poczatek_w_wiosce
+  - wszystko_zebrane
+  - antygona
+  - antygona_koniec
+  - duzy_sloik
+  - antygona_kamera
+  questTriggerStates: 010000000000
 --- !u!1 &490032032612863689
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +86,7 @@ Transform:
   - {fileID: 8892850902003287492}
   - {fileID: 3401199327090422007}
   - {fileID: 1248000830270351450}
+  - {fileID: 1014861057}
   m_Father: {fileID: 1148953298729049133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,6 +106,7 @@ MonoBehaviour:
   - {fileID: 2185335597108872592}
   - {fileID: 5664821281506580315}
   - {fileID: 3020863561593364392}
+  - {fileID: 1014861058}
   testing: 0
   testText: {fileID: 0}
 --- !u!114 &3944899335367316771
@@ -72,6 +128,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1ee08bfaf0236f449a71d669a7a4313d, type: 3}
   - {fileID: 21300000, guid: 296f9256b0fa67f46a25ef3b2ef67f6f, type: 3}
   - {fileID: 21300000, guid: 42ca3755bc5d644499c062e72ab8f54c, type: 3}
+  - {fileID: 21300000, guid: 147307f9ff9dfe547811c63936d64bf0, type: 3}
   characterNames:
   - "Mi\u0142y Jimmy"
   - "M\u0142ody Testiusz"
@@ -79,6 +136,7 @@ MonoBehaviour:
   - "Przera\u017Cona Rodzinka"
   - Zbrodniarz Gorgiasz
   - "Ruda Zdzi\u015Bka"
+  - Zagubiona Antygona
   itemIcons:
   - {fileID: 0}
   - {fileID: 21300000, guid: e88d05c16e18e614bbcd2f154efe4668, type: 3}
@@ -321,7 +379,7 @@ MonoBehaviour:
   - chase_szczur2
   - przesuniete
   - poczatek_w_wiosce
-  questTriggerStates: 000000000000
+  questTriggerStates: 000000000000000001
 --- !u!1 &6374009313896230967
 GameObject:
   m_ObjectHideFlags: 0

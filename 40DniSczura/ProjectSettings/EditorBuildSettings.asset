@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheTestingLimbo.unity
     guid: caa13b9be966db04f959e7fb04862e13
+  - enabled: 1
+    path: Assets/Scenes/Quest3.unity
+    guid: 6c71ca27e193a2c47a0e35b6d81a20cf
   m_configObjects: {}
