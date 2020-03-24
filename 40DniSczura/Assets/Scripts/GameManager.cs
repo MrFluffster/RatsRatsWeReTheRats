@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour
     public GameObject inventoryBar;
     public Image[] inventorySlots;
 
+    public Text dialogText;
+    public Text nameText;
+    public Image portrait;
+    public GameObject dialogBox;
+    public Slider deathTimer;
+
     // Start is called before the first frame update
     void Start()
     {

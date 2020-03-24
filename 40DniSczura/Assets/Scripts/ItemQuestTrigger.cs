@@ -9,8 +9,10 @@ public class ItemQuestTrigger : MonoBehaviour
     public int itemID;
     public int requiredAmount;
     private int counter;
-    private bool removeItems = true;
+    public bool removeItems;
     private bool playerInRange;
+    public bool state;
+    public bool needsLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +31,12 @@ public class ItemQuestTrigger : MonoBehaviour
                 counter++;
             }
         }
-        if(counter >= requiredAmount && playerInRange)
+        //Debug.Log("Counter:" + counter);
+        if(counter >= requiredAmount && (playerInRange || !needsLocation))
         {
             if (QuestManager.instance.questList[questID].questStarted && !QuestManager.instance.questList[questID].questFinished)
             {
-                QuestManager.instance.SwitchTrigger(questID, triggerName);
+                QuestManager.instance.TriggerQuest(questID, triggerName, state);
             }
             if(removeItems)
             {

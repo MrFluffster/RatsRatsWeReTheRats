@@ -42,6 +42,8 @@ public class PlayerKiller : MonoBehaviour
             {
                 QuestManager.instance.questList[ResetState.instance.questID].questTriggerStates[i] = ResetState.instance.triggerState[i];
             }
+            PlayerController.instance.RemoveItems(1);
+            PlayerController.instance.RemoveItems(2);
             playerKilled = false;
             PlayerController.instance.gameObject.SetActive(true);
             PlayerController.instance.transitioning = true;

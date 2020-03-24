@@ -23,7 +23,10 @@ public class NPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        dialogBox = GameManager.instance.dialogBox;
+        dialogText = GameManager.instance.dialogText;
+        nameText = GameManager.instance.nameText;
+        portrait = GameManager.instance.portrait;
     }
 
     // Update is called once per frame
@@ -42,7 +45,7 @@ public class NPC : MonoBehaviour
                 CheckIfCommand();
                 if (cameraLocked)
                 {
-                    CameraContorller.instance.lerpSpeed = 0.05f;
+                    CameraContorller.instance.lerpSpeed = 0.03f;
                     CameraContorller.instance.anchor = transform;
                     CameraContorller.instance.cameraSize = 4f;
                     Debug.Log(CameraContorller.instance.anchor.name);
