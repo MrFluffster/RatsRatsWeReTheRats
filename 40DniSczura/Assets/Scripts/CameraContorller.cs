@@ -27,6 +27,7 @@ public class CameraContorller : MonoBehaviour
         {
             instance = this;
         }
+        DontDestroyOnLoad(gameObject);
         mainCamera = GetComponent<Camera>();
     }
 
