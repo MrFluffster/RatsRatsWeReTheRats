@@ -8,12 +8,15 @@ public class Options : MonoBehaviour
     public GameObject options_hint;
     public GameObject options_hint_2;
 
+    public AudioSource audioSource;
+
     public bool optionsLocked;
     public static Options instance;
 
     // Start is called before the first frame update
     void Start()
     {
+
         if (instance != null)
         {
             Destroy(gameObject);
@@ -33,6 +36,7 @@ public class Options : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(1) && options.activeSelf && !optionsLocked)
         {
+            audioSource.Play();
             options.SetActive(false);
             options_hint.SetActive(true);
             options_hint_2.SetActive(false);
@@ -41,6 +45,7 @@ public class Options : MonoBehaviour
 
         else if (Input.GetMouseButtonDown(1) && !options.activeSelf && !optionsLocked)
         {
+            audioSource.Play();
             options.SetActive(true);
             options_hint.SetActive(false);
             options_hint_2.SetActive(true);
