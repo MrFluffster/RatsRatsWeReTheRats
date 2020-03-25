@@ -614,6 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101034686}
   - component: {fileID: 101034687}
+  - component: {fileID: 101034688}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -685,6 +686,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &101034688
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101034685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 326a2695396253949a19853de6aa0f93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &119937470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33794,6 +33814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394367553}
   - component: {fileID: 394367554}
+  - component: {fileID: 394367555}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -33865,6 +33886,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &394367555
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394367552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 326a2695396253949a19853de6aa0f93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &430056012 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 17594042973174612, guid: 5e62551f653e5a64e91de3fec14c6212,
@@ -58332,6 +58372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301871162}
   - component: {fileID: 1301871163}
+  - component: {fileID: 1301871164}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -58403,6 +58444,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1301871164
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301871161}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 326a2695396253949a19853de6aa0f93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1332626211
 GameObject:
   m_ObjectHideFlags: 0
@@ -61095,7 +61155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questID: 3
-  triggerState: 010000000000000000000001
+  triggerState: 01000000000000000000000100
   currentScene: Quest3
   sliderOfDeath: {fileID: 1241203136}
 --- !u!1 &1695418685
@@ -63216,6 +63276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929860151}
   - component: {fileID: 1929860152}
+  - component: {fileID: 1929860153}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -63287,6 +63348,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1929860153
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929860150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 326a2695396253949a19853de6aa0f93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1937793093
 GameObject:
   m_ObjectHideFlags: 0
