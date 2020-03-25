@@ -45,6 +45,8 @@ public class MinigameMeter : MonoBehaviour
 
     public Slider pointDisplay;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +89,7 @@ public class MinigameMeter : MonoBehaviour
             if (numberInSequence < sequence.Length)
             {
                 Debug.Log(numberInSequence);
+                audioSource.Play();
                 arrows[sequence[numberInSequence]].sprite = activeArrow;
                 displayTimer = displayTimerBase;
                 sequenceTimer = sequenceTimerBase;
@@ -124,6 +127,7 @@ public class MinigameMeter : MonoBehaviour
             if(playerInput != -1 && displayTimer < 0)
             {
                 arrows[playerInput].sprite = activeArrow;
+                audioSource.Play();
                 displayTimer = displayTimerBase;
                 lastInput = playerInput;
                 //Debug.Log("Player: " + playerInput);

@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\Scripts\QuestObjectActivator.cs" />
     <Compile Include="Assets\Scripts\ResetState.cs" />
+    <Compile Include="Assets\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\UIHolder.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/mimix/OneDrive/Dokumenty/GitHub/RatsRatsWeReTheRats/40DniSczura/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

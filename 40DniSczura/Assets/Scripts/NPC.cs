@@ -20,6 +20,8 @@ public class NPC : MonoBehaviour
 
     public bool instantlyActivated;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class NPC : MonoBehaviour
         dialogText = GameManager.instance.dialogText;
         nameText = GameManager.instance.nameText;
         portrait = GameManager.instance.portrait;
+        audioSource = CameraContorller.instance.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class NPC : MonoBehaviour
             dialogText = GameManager.instance.dialogText;
             nameText = GameManager.instance.nameText;
             portrait = GameManager.instance.portrait;
+            audioSource = CameraContorller.instance.GetComponent<AudioSource>();
         }
         if ((Input.GetButtonDown("Fire1") || (instantlyActivated && currentLine == 0)) && playerInRange)
         {
@@ -60,6 +64,7 @@ public class NPC : MonoBehaviour
                 }
                 if (currentLine < dialog.Length)
                 {
+                    audioSource.Play();
                     dialogText.text = dialog[currentLine];
                     currentLine++;
                 }             
