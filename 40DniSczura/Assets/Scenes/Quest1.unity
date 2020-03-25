@@ -24890,41 +24890,11 @@ PrefabInstance:
       propertyPath: anchor
       value: 
       objectReference: {fileID: 1794142893}
-    - target: {fileID: 1148953298729049299, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: cameraSize
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
-      propertyPath: inventorySlots.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: deathTimer
+      propertyPath: inventoryBar
       value: 
-      objectReference: {fileID: 1979645222}
-    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: dialogBox
-      value: 
-      objectReference: {fileID: 1979645223}
-    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: portrait
-      value: 
-      objectReference: {fileID: 1979645224}
-    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 1979645225}
-    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
-        type: 3}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 1979645226}
+      objectReference: {fileID: 1979645235}
     - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
       propertyPath: inventorySlots.Array.data[0]
@@ -24967,24 +24937,29 @@ PrefabInstance:
       objectReference: {fileID: 1979645227}
     - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
-      propertyPath: inventoryBar
+      propertyPath: dialogText
       value: 
-      objectReference: {fileID: 1979645235}
-    - target: {fileID: 5664821281506580315, guid: 648124be5b889dc429b870d746e7123e,
+      objectReference: {fileID: 1979645226}
+    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
-      propertyPath: questTriggers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664821281506580315, guid: 648124be5b889dc429b870d746e7123e,
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1979645225}
+    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
-      propertyPath: questTriggerStates.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664821281506580315, guid: 648124be5b889dc429b870d746e7123e,
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 1979645224}
+    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
         type: 3}
-      propertyPath: questTriggers.Array.data[6]
-      value: zamkniete
-      objectReference: {fileID: 0}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1979645223}
+    - target: {fileID: 3944899335367316771, guid: 648124be5b889dc429b870d746e7123e,
+        type: 3}
+      propertyPath: deathTimer
+      value: 
+      objectReference: {fileID: 1979645222}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 648124be5b889dc429b870d746e7123e, type: 3}
 --- !u!1001 &1185533869
