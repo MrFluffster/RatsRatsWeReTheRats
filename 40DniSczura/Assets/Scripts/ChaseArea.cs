@@ -6,6 +6,8 @@ public class ChaseArea : MonoBehaviour
 {
     public AIController enemy;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class ChaseArea : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            audioSource.Play();
             enemy.playerInRange = true;
         }
     }
