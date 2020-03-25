@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PatrolPoint : MonoBehaviour
 {
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,6 @@ public class PatrolPoint : MonoBehaviour
         AIController patrolling = collision.GetComponent<AIController>();
         if(patrolling != null)
         {
-
             patrolling.atPatrolPoint = true;
             if (patrolling.currentGoal >= patrolling.patrolRoute.Length - 1)
             {

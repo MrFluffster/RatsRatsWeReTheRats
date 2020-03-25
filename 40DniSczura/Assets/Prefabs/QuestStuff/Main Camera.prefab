@@ -58,7 +58,8 @@ MonoBehaviour:
   - mg3
   - mg4
   - mg5
-  questTriggerStates: 0100000000000000000000
+  - zamkniete
+  questTriggerStates: 010000000000000000000000
 --- !u!1 &490032032612863689
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor: {fileID: 0}
-  cameraSize: 3
+  cameraSize: 5
   lerpSpeed: 0.2
   testing: 1
 --- !u!114 &1148953298729049132
@@ -332,7 +333,8 @@ MonoBehaviour:
   - koniec
   - gorgiasz_kamera
   - rodzinka_ucieka
-  questTriggerStates: 000000000000
+  - zamkniete
+  questTriggerStates: 00000000000000
 --- !u!1 &2063875459699856032
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +388,7 @@ MonoBehaviour:
   - kula_koniec
   - kula_zatkana
   - chase_szczur1
-  - chase_szczur2
+  - zamkniete
   - przesuniete
   - poczatek_w_wiosce
   questTriggerStates: 000000000000000001

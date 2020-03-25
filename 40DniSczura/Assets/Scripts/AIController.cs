@@ -14,8 +14,6 @@ public class AIController : MonoBehaviour
     public float moveSpeed;
     public bool atPatrolPoint;
 
-    public AudioSource audioSource;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +36,6 @@ public class AIController : MonoBehaviour
         //Chase the player
         if(canChase && playerInRange)
         {
-            audioSource.Play();
             //Debug.Log("AAAAAAAA");
             rigidBody.velocity = (PlayerController.instance.transform.position - transform.position).normalized * moveSpeed;
         }

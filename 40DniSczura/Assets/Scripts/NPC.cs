@@ -20,8 +20,6 @@ public class NPC : MonoBehaviour
 
     public bool instantlyActivated;
 
-    public AudioSource audioSource;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +32,13 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(dialogBox == null)
+        {
+            dialogBox = GameManager.instance.dialogBox;
+            dialogText = GameManager.instance.dialogText;
+            nameText = GameManager.instance.nameText;
+            portrait = GameManager.instance.portrait;
+        }
         if ((Input.GetButtonDown("Fire1") || (instantlyActivated && currentLine == 0)) && playerInRange)
         {
             if (dialogBox.activeInHierarchy && (currentLine >= dialog.Length))
@@ -55,7 +60,6 @@ public class NPC : MonoBehaviour
                 }
                 if (currentLine < dialog.Length)
                 {
-                    audioSource.Play();
                     dialogText.text = dialog[currentLine];
                     currentLine++;
                 }             

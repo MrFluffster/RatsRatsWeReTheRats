@@ -101,13 +101,13 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   animator: {fileID: 0}
   rotationSpeed: 0.9
-  moveSpeed: 6
+  moveSpeed: 7
   backSpeed: 3
   ratAngle: 0
   inventory: 0000000000000000000000000000000000000000000000000000000000000000
   playerLocked: 0
   transitioning: 0
-  transitionID: 
+  transitionID: quest1
 --- !u!50 &167046733867318350
 Rigidbody2D:
   serializedVersion: 4
@@ -173,9 +173,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0283826, y: 0.35110605}
+    - - {x: -0.41596586, y: 0.6486281}
+      - {x: -0.0283826, y: 0.35110605}
       - {x: 0.2091698, y: 0.15471888}
       - {x: 0.21244586, y: -0.26251552}
       - {x: -0.20104259, y: -0.20326707}
       - {x: -0.3877167, y: 0.064596295}
-      - {x: -0.56686884, y: 0.6199573}
+      - {x: -0.6332878, y: 0.47291863}
+      - {x: -0.5337946, y: 0.57269996}

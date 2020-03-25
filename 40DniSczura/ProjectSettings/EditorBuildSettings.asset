@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quest3.unity
     guid: 6c71ca27e193a2c47a0e35b6d81a20cf
+  - enabled: 1
+    path: Assets/Scenes/Quest1.unity
+    guid: 57cacd33c47075e4481b7aca1bc57d65
   m_configObjects: {}
