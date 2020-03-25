@@ -7,6 +7,7 @@ public class AreaExit : MonoBehaviour
 {
     public string sceneToLoad;
     public string transitionID;
+    private bool transit;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,11 @@ public class AreaExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(transit && UIHolder.instance.fadeScreen.color.a == 1f)
+        {
+            transit = false;
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +31,9 @@ public class AreaExit : MonoBehaviour
         {
             PlayerController.instance.transitioning = true;
             PlayerController.instance.transitionID = transitionID;
-            SceneManager.LoadScene(sceneToLoad);
+            UIHolder.instance.FadeToBlack();
+            PlayerController.instance.playerLocked = true;
+            transit = true;
         }
     }
 }

@@ -34,6 +34,10 @@ public class CameraContorller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(mainCamera == null)
+        {
+            mainCamera = GetComponent<Camera>();
+        }
         if(anchor != null)
         {
             transform.position = Vector3.Lerp(transform.position, new Vector3(anchor.position.x, anchor.position.y, transform.position.z), lerpSpeed);
