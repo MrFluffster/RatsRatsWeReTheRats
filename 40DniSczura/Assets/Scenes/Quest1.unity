@@ -952,7 +952,7 @@ MonoBehaviour:
   questTrigger: rozmowa_rodzinka
   cameraLocked: 1
   instantlyActivated: 1
-  audioSource: {fileID: 936402859}
+  audioSource: {fileID: 0}
 --- !u!4 &367705540
 Transform:
   m_ObjectHideFlags: 0
@@ -24894,12 +24894,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!82 &936402859 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 936402859, guid: 648124be5b889dc429b870d746e7123e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1130821661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &952226960
 GameObject:
   m_ObjectHideFlags: 0
@@ -27853,30 +27847,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1979645221}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1979645236 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 17594041991243310, guid: 5e62551f653e5a64e91de3fec14c6212,
-    type: 3}
-  m_PrefabInstance: {fileID: 1979645221}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1979645237 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 17594042792916625, guid: 5e62551f653e5a64e91de3fec14c6212,
-    type: 3}
-  m_PrefabInstance: {fileID: 1979645221}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1979645238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 17594041973037406, guid: 5e62551f653e5a64e91de3fec14c6212,
@@ -27895,8 +27865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d76caaa990c3641ac60ff736ad1f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music_slider: {fileID: 1979645236}
-  fx_slider: {fileID: 1979645237}
+  music_slider: {fileID: 0}
+  fx_slider: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: e98c86a38655daf41909b2c678b326a0, type: 2}
 --- !u!82 &1979645240
 AudioSource:
