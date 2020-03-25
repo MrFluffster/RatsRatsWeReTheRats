@@ -48,6 +48,7 @@ public class PlayerKiller : MonoBehaviour
             PlayerController.instance.RemoveItems(1);
             PlayerController.instance.RemoveItems(2);
             playerKilled = false;
+            PlayerController.instance.playerLocked = false;
             PlayerController.instance.gameObject.SetActive(true);
             PlayerController.instance.transitioning = true;
             SceneManager.LoadScene(ResetState.instance.currentScene);

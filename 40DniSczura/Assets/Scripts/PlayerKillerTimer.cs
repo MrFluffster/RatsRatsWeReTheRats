@@ -62,6 +62,7 @@ public class PlayerKillerTimer : MonoBehaviour
                 }
                 PlayerController.instance.RemoveItems(1);
                 PlayerController.instance.RemoveItems(2);
+                PlayerController.instance.playerLocked = false;
                 playerKilled = false;
                 PlayerController.instance.gameObject.SetActive(true);
                 PlayerController.instance.transitioning = true;

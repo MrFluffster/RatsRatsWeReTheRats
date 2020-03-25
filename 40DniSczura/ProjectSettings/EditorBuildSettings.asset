@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 3c5bd1f4d8ca87545a6897ba9910abf2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Quest2.unity
     guid: d30104081b4aac24491b6fdd55e2dc21
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TheTestingLimbo.unity
     guid: caa13b9be966db04f959e7fb04862e13
   - enabled: 1
-    path: Assets/Scenes/Quest3.unity
-    guid: 6c71ca27e193a2c47a0e35b6d81a20cf
+    path: Assets/Scenes/Wioska.unity
+    guid: e3b57d50785652941849b0a6a349ee6c
   - enabled: 1
     path: Assets/Scenes/Quest1.unity
     guid: 57cacd33c47075e4481b7aca1bc57d65
   - enabled: 1
-    path: Assets/Scenes/Wioska.unity
-    guid: e3b57d50785652941849b0a6a349ee6c
+    path: Assets/Scenes/Quest3.unity
+    guid: 6c71ca27e193a2c47a0e35b6d81a20cf
   m_configObjects: {}
