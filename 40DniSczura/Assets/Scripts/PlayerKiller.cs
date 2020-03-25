@@ -11,6 +11,8 @@ public class PlayerKiller : MonoBehaviour
     public float deathTimerBase;
     public float deathTimer;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class PlayerKiller : MonoBehaviour
             deathTimer = deathTimerBase;
             playerInRange = false;
             playerKilled = true;
+            audioSource.Play();
         }
 
         if(deathTimer >= 0)

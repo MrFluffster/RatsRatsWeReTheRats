@@ -36,6 +36,8 @@ public class MinigameReverse : MonoBehaviour
     public string trigger;
     public bool triggerState;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +110,7 @@ public class MinigameReverse : MonoBehaviour
             if (playerInput != -1 && displayTimer < 0)
             {
                 arrows[playerInput].sprite = activeArrow;
+                audioSource.Play();
                 displayTimer = displayTimerBase;
                 lastInput = playerInput;
                 //Create a reversed output in the lists

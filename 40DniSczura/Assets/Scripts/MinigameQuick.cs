@@ -35,6 +35,8 @@ public class MinigameQuick : MonoBehaviour
     public string trigger;
     public bool triggerState;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,7 @@ public class MinigameQuick : MonoBehaviour
             if(numberInSequence < sequence.Length)
             {             
                 Debug.Log(numberInSequence);
+                audioSource.Play();
                 arrows[sequence[numberInSequence]].sprite = activeArrow;
                 displayTimer = displayTimerBase;
                 sequenceTimer = sequenceTimerBase;
@@ -105,6 +108,7 @@ public class MinigameQuick : MonoBehaviour
             if (playerInput == sequence[numberInSequence] && displayTimer < 0)
             {
                 Debug.Log("Player: " + numberInSequence);
+                audioSource.Play();
                 arrows[sequence[numberInSequence]].sprite = activeArrow;
                 displayTimer = displayTimerBase;
                 numberInSequence++;
