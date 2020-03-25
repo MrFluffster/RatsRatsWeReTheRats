@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     //public GameObject tail;
     //private float lastRotation;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
     public void AddItem(int itemID)
     {
+        audioSource.Play();
         SortInventory();
         for(int i = 0; i < inventory.Length; i++)
         {
@@ -138,6 +141,7 @@ public class PlayerController : MonoBehaviour
 
     public void RemoveItems(int itemID)
     {
+        audioSource.Play();
         SortInventory();
         for (int i = 0; i < inventory.Length; i++)
         {

@@ -20,6 +20,8 @@ public class NPC : MonoBehaviour
 
     public bool instantlyActivated;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class NPC : MonoBehaviour
                 }
                 if (currentLine < dialog.Length)
                 {
+                    audioSource.Play();
                     dialogText.text = dialog[currentLine];
                     currentLine++;
                 }             
