@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questID: 0
-  questStarted: 0
+  questStarted: 1
   questFinished: 0
   questTriggers:
   - testowy_trigger
