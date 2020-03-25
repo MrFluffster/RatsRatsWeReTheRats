@@ -455,18 +455,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 89084475}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &137531344 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 17594041991243310, guid: 5e62551f653e5a64e91de3fec14c6212,
-    type: 3}
-  m_PrefabInstance: {fileID: 177268567}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &139895507
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,11 +800,47 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 17594041991243310, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594041991243310, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594042075615118, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -76.94999
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594042075615118, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1286.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594042075615118, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594042075615118, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 944.8
+      objectReference: {fileID: 0}
     - target: {fileID: 17594042075615119, guid: 5e62551f653e5a64e91de3fec14c6212,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 17594042075615153, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c885623b89666941bf005fc0bd32b8b,
+        type: 3}
     - target: {fileID: 17594042258661223, guid: 5e62551f653e5a64e91de3fec14c6212,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -862,10 +886,25 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 17594042792916625, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594042792916625, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 17594042959120593, guid: 5e62551f653e5a64e91de3fec14c6212,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17594043575112930, guid: 5e62551f653e5a64e91de3fec14c6212,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 17594043575112931, guid: 5e62551f653e5a64e91de3fec14c6212,
         type: 3}
@@ -26485,8 +26524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d76caaa990c3641ac60ff736ad1f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music_slider: {fileID: 137531344}
-  fx_slider: {fileID: 2078332688}
+  music_slider: {fileID: 0}
+  fx_slider: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: e98c86a38655daf41909b2c678b326a0, type: 2}
 --- !u!1001 &1766180021
 PrefabInstance:
@@ -56022,18 +56061,6 @@ Transform:
   m_Father: {fileID: 677421185}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &2078332688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 17594042792916625, guid: 5e62551f653e5a64e91de3fec14c6212,
-    type: 3}
-  m_PrefabInstance: {fileID: 177268567}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2078825043
 GameObject:
   m_ObjectHideFlags: 0
